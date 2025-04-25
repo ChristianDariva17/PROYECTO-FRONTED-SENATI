@@ -17,10 +17,14 @@
 
 .group{
     width: 65%;
-    margin: 0px auto 40px auto ;
+    margin: 20px auto 50px auto ;
 }
 
 
 .container-botones{
     text-align: center;
+}
+
+.fw-bold{
+    margin-top: 90px;
 }
