@@ -4,12 +4,29 @@
 }
 
 .fondo{
-    background-color: #B8323E;
-}
-.texto{
     background-color: #EDECD9;
 }
 
-.VIR{
-    height: 100%;
+.boton {
+    background-color: #F6A500;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    
 }
+
+.form-control{
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container-botones{
+    text-align: center;
+}
+
+.form-label {
+    display: inline-block;
+    text-align: right;
+    margin-right: 10px;
+}   
