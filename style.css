@@ -15,18 +15,12 @@
     
 }
 
-.form-control{
+.group{
     width: 65%;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0px auto 40px auto ;
 }
+
 
 .container-botones{
     text-align: center;
 }
-
-.form-label {
-    display: inline-block;
-    text-align: right;
-    margin-right: 10px;
-}   
