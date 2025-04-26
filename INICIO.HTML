@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INICIO</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    
+    <nav class="navbar navbar-expand-lg navbar-fixed" style="background-color: #EDECD9;">
+        <div class="container-fluid">
+            <img class="logo" src="imagenes/logo03.png" alt="img-thumbnail">
+          <a class="navbar-brand m-3 text-black fw-semibold " href="#">MIKHUY PERÚ</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item m-2">
+                <a class="nav-link active text-black fw-semibold" aria-current="page" href="#">Recientes</a>
+              </li>
+              <li class="nav-item m-2">
+                <a class="nav-link text-black fw-semibold" href="#">Lo nuevo</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control m-2 border border-3 border border-dark-subtle" type="search" placeholder="Busqueda" aria-label="Search">
+              <select class="form-select m-2" id="categoria" onchange="filtrar()">
+                <option value="">Todas las Categorías</option>
+                <option value="Pollerias">Pollerias</option>
+                <option value="Chifa">Chifa</option>
+                <option value="Marina">Marina</option>
+                <option value="Parrilas">Parrilas</option>
+                <option value="Cafeterias">Parrilas</option>
+              </select>
+              <button class="btn btn-warning m-2 text-black fw-bold" type="button">CERRAR SESIÓN</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+    <!--tarjetas-->
+    <div class="container">
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+            <div class="card mt-3 border border-danger rounded-0 border border-2" style="width: 18rem;">
+                <img src="imagenes/shulita.png" class="card-img-top rounded-0" alt="..." style="max-height: 240px;">
+                <div class="card-body text-center">
+                  <h5 class="card-title">SHULITA</h5>
+                  <p class="card-text"></p>
+                  <a href="#" class="btn btn-warning fw-semibold">CONOCER MÁS</a>
+                </div>
+              </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+            <div class="card mt-3 border border-danger rounded-0 border border-2" style="width: 18rem;">
+                <img src="imagenes/AL PALO.png" class="card-img-top rounded-0" alt="..." style=>
+                <div class="card-body text-center">
+                  <h5 class="card-title">AL PALO Y LA PARRILA</h5>
+                  <p class="card-text"></p>
+                  <a href="#" class="btn btn-warning fw-semibold">CONOCER MÁS</a>
+                </div>
+              </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+            <div class="card mt-3 border border-danger rounded-0 border border-2" style="width: 18rem;">
+                <img src="imagenes/KHONWA.jpg" class="card-img-top rounded-0" alt="..." style="max-height: 240px;">
+                <div class="card-body text-center">
+                  <h5 class="card-title">KHON WA</h5>
+                  <p class="card-text"></p>
+                  <a href="#" class="btn btn-warning fw-semibold">CONOCER MÁS</a>
+                </div>
+              </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+            <div class="card mt-3 border border-danger rounded-0 border border-2" style="width: 18rem;">
+                <img src="imagenes/willlon02.jpg" class="card-img-top rounded-0" alt="..." style="max-height: 240px;">
+                <div class="card-body text-center ">
+                  <h5 class="card-title">POLLOS BROSTER WILLON</h5>
+                  <p class="card-text"></p>
+                  <a href="#" class="btn btn-warning fw-semibold">CONOCER MÁS</a>
+                </div>
+              </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+            <div class="card mt-3 border border-danger rounded-0 border border-2" style="width: 18rem;">
+                <img src="imagenes/BEN HUR.png" class="card-img-top rounded-0" alt="..." style="max-height: 240px;">
+                <div class="card-body text-center ">
+                  <h5 class="card-title">BEN-HUR</h5>
+                  <p class="card-text"></p>
+                  <a href="#" class="btn btn-warning fw-semibold">CONOCER MÁS</a>
+                </div>
+              </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+            <div class="card mt-3 border border-danger rounded-0 border border-2" style="width: 18rem;">
+                <img src="imagenes/NORKYS.png" class="card-img-top rounded-0" alt="..." style="max-height: 240px;">
+                <div class="card-body text-center ">
+                  <h5 class="card-title">NORKYS</h5>
+                  <p class="card-text"></p>
+                  <a href="#" class="btn btn-warning fw-semibold">CONOCER MÁS</a>
+                </div>
+              </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+            <div class="card mt-3 border border-danger rounded-0 border border-2" style="width: 18rem;">
+                <img src="imagenes/EL ASADOR.jpg" class="card-img-top rounded-0" alt="..." style="max-height: 240px;">
+                <div class="card-body text-center ">
+                  <h5 class="card-title">EL ASADOR STEAKHOUSE</h5>
+                  <p class="card-text"></p>
+                  <a href="#" class="btn btn-warning fw-semibold">CONOCER MÁS</a>
+                </div>
+              </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+            <div class="card mt-3 border border-danger rounded-0 border border-2" style="width: 18rem;">
+                <img src="imagenes/ORLANDOS.jpg" class="card-img-top rounded-0" alt="..." style="max-height: 240px;">
+                <div class="card-body text-center ">
+                  <h5 class="card-title">ORLANDO’S PARRILLAS</h5>
+                  <p class="card-text"></p>
+                  <a href="#" class="btn btn-warning fw-semibold">CONOCER MÁS</a>
+                </div>
+              </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+            <div class="card mt-3 border border-danger rounded-0 border border-2" style="width: 18rem;">
+                <img src="imagenes/EMBARCADERO33.jpg" class="card-img-top rounded-0" alt="..." style="max-height: 240px;">
+                <div class="card-body text-center ">
+                  <h5 class="card-title">EMBARCADERO 33</h5>
+                  <p class="card-text"></p>
+                  <a href="#" class="btn btn-warning fw-semibold">CONOCER MÁS</a>
+                </div>
+              </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+            <div class="card mt-3 border border-danger rounded-0 border border-2" style="width: 18rem;">
+                <img src="imagenes/EL RINCON NORTEÑO.jpg" class="card-img-top rounded-0" alt="..." style="max-height: 240px;">
+                <div class="card-body text-center ">
+                  <h5 class="card-title">EL RINCÓN NORTEÑO</h5>
+                  <p class="card-text"></p>
+                  <a href="#" class="btn btn-warning fw-semibold">CONOCER MÁS</a>
+                </div>
+              </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+            <div class="card mt-3 border border-danger rounded-0 border border-2" style="width: 18rem;">
+                <img src="imagenes/HAMMA.jpg" class="card-img-top rounded-0" alt="..." style="max-height: 240px;">
+                <div class="card-body text-center ">
+                  <h5 class="card-title">HAMMA</h5>
+                  <p class="card-text"></p>
+                  <a href="#" class="btn btn-warning fw-semibold">CONOCER MÁS</a>
+                </div>
+              </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+            <div class="card mt-3 border border-danger rounded-0 border border-2" style="width: 18rem;">
+                <img src="imagenes/YARINAZ.jpg" class="card-img-top rounded-0" alt="..." style="max-height: 240px;">
+                <div class="card-body text-center ">
+                  <h5 class="card-title">YARINAZ</h5>
+                  <p class="card-text"></p>
+                  <a href="#" class="btn btn-warning fw-semibold">CONOCER MÁS</a>
+                </div>
+              </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+            <div class="card mt-3 border border-danger border border-2 rounded-0" style="width: 18rem;">
+                <img src="imagenes/JON.jpg" class="card-img-top rounded-0" alt="..." style="max-height: 240px;">
+                <div class="card-body text-center ">
+                  <h5 class="card-title">JON RESTAURANTE SUSHI</h5>
+                  <p class="card-text"></p>
+                  <a href="#" class="btn btn-warning fw-semibold">CONOCER MÁS</a>
+                </div>
+              </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+            <div class="card mt-3 border border-danger border border-2 rounded-0" style="width: 18rem;">
+                <img src="imagenes/LA CASITA.jpg" class="card-img-top rounded-0" alt="..." style="max-height: 240px;">
+                <div class="card-body text-center ">
+                  <h5 class="card-title">LA CASITA</h5>
+                  <p class="card-text"></p>
+                  <a href="#" class="btn btn-warning fw-semibold">CONOCER MÁS</a>
+                </div>
+              </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+            <div class="card mt-3 border border-danger border border-2 rounded-0" style="width: 18rem;">
+                <img src="imagenes/KONOHA.jpg" class="card-img-top rounded-0" alt="..." style="max-height: 240px;">
+                <div class="card-body text-center ">
+                  <h5 class="card-title">KONOHA-LOUNGE BAR</h5>
+                  <p class="card-text"></p>
+                  <a href="#" class="btn btn-warning fw-semibold">CONOCER MÁS</a>
+                </div>
+              </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-3">
+            <div class="card mt-3 border border-danger border border-2 rounded-0" style="width: 18rem;">
+                <img src="imagenes/MANU.jpg" class="card-img-top rounded-0" alt="..." style="max-height: 240px;">
+                <div class="card-body text-center ">
+                  <h5 class="card-title">MANU CAFÉ</h5>
+                  <p class="card-text"></p>
+                  <a href="#" class="btn btn-warning fw-semibold">CONOCER MÁS</a>
+                </div>
+              </div>
+        </div>
+    </div>
+    </div>
+    
+
+    <footer>
+      <div class="container-fluid p-5 mt-2 " style="background-color: #EDECD9;">
+        <div class="row">
+          <div class="col">
+            <a href="https://www.youtube.com/watch?v=-ZInT4p9hH8&t=2618s" class="text-decoration-none text-black">TUTORIAL BOOTSTRAP <i class="bi bi-youtube"></i></a>
+          </div>
+          <div class="col text-black">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam nulla exercitationem beatae voluptate aliquid eveniet numquam necessitatibus! Minima fugit, autem deleniti ut, est assumenda, non culpa blanditiis suscipit adipisci qui.
+          </div>
+          <div class="col text-black">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint, labore? Quae, provident dolorum! Voluptates quia neque tempore dolorum in tempora perferendis delectus, itaque quis eaque quod. Enim suscipit nisi eaque?
+          </div>
+        </div>
+      </div>
+    </footer>
+
+      
+</body>

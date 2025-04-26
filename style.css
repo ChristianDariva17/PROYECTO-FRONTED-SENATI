@@ -28,3 +28,26 @@
 .fw-bold{
     margin-top: 90px;
 }
+
+.form-control{
+    width: 85%;
+    height: 30%;
+    margin-left: 50px;
+}
+
+.btn{
+    background-color: #F6A500;
+    width: 70%;
+    height: 40%;
+}
+
+.navbar-fixed{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+body{
+    padding-top: 90px; /* espacio para que no se oculte el contenido */
+  }

@@ -6,27 +6,28 @@
     <title>PRINCIPAL</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
     
-    <nav class="navbar navbar-expand-lg bg-danger ">
+    <nav class="navbar navbar-expand-lg navbar-fixed" style="background-color: #EDECD9;">
         <div class="container-fluid">
             <img class="logo" src="imagenes/loro (1).png" alt="img-thumbnail">
-          <a class="navbar-brand m-3 text-white" href="#">MIKHUY PERÚ</a>
+          <a class="navbar-brand m-3 text-black fw-semibold " href="#">MIKHUY PERÚ</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item m-2">
-                <a class="nav-link active text-white" aria-current="page" href="#">Recientes</a>
+                <a class="nav-link active text-black fw-semibold" aria-current="page" href="#">Recientes</a>
               </li>
               <li class="nav-item m-2">
-                <a class="nav-link text-white" href="#">Lo nuevo</a>
+                <a class="nav-link text-black fw-semibold" href="#">Lo nuevo</a>
               </li>
               <li class="nav-item dropdown m-2">
-                <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link dropdown-toggle text-black fw-semibold" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Dropdown
                 </a>
                 <ul class="dropdown-menu">
@@ -38,8 +39,14 @@
               </li>
             </ul>
             <form class="d-flex" role="search">
-              <button class="btn btn-success m-2 " type="button">INICIAR SESIÓN</button>
-              <button class="btn btn-success m-2 " type="button">REGISTRARSE</button>
+              <input class="form-control m-2 border border-3 border border-dark-subtle" type="search" placeholder="Busqueda" aria-label="Search">
+              <select class="form-select m-2" id="categoria" onchange="filtrar()">
+                <option value="">Todas las Categorías</option>
+                <option value="Pollerias">Pollerias</option>
+                <option value="Chifa">Chifa</option>
+                <option value="Marina">Marina</option>
+              </select>
+              <button class="btn btn-warning m-2 text-black fw-bold" type="button">INICIAR SESIÓN</button>
             </form>
           </div>
         </div>
@@ -48,7 +55,7 @@
       <!--carrusel de imagenes-->
 
       <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner " style="max-height: 900px;">
+        <div class="carousel-inner " style="max-height: 850px;">
           <div class="carousel-item active">
             <img src="imagenes/ceviche.jpeg" class="d-block w-100" alt="...">
           </div>
@@ -65,42 +72,42 @@
     <div class="container">
     <div class="row">
         <div class="col-12 col-sm-12 col-md-6 col-lg-3">
-            <div class="card mt-3 border border-success rounded-4" style="width: 18rem;">
+            <div class="card mt-3 border border-danger rounded-4 border border-2" style="width: 18rem;">
                 <img src="imagenes/shulita.png" class="card-img-top rounded-4" alt="..." style="max-height: 240px;">
                 <div class="card-body text-center">
                   <h5 class="card-title">POLLERIA SHULITA</h5>
                   <p class="card-text">Shulita Brasa es sabor y tradición en Pucallpa desde 1975.</p>
-                  <a href="#" class="btn btn-primary">CONOCER MÁS</a>
+                  <a href="#" class="btn btn-warning fw-semibold">CONOCER MÁS</a>
                 </div>
               </div>
         </div>
         <div class="col-12 col-sm-12 col-md-6 col-lg-3">
-            <div class="card mt-3 border border-success rounded-4" style="width: 18rem;">
-                <img src="imagenes/2.png" class="card-img-top rounded-4" alt="..." style=>
+            <div class="card mt-3 border border-danger rounded-4 border border-2" style="width: 18rem;">
+                <img src="imagenes/AL PALO.png" class="card-img-top rounded-4" alt="..." style=>
                 <div class="card-body text-center">
                   <h5 class="card-title">AL PALO Y LA PARRILA</h5>
                   <p class="card-text">28 años de un exquisito sabor que hoy queremos compartir.</p>
-                  <a href="#" class="btn btn-primary">CONOCER MÁS</a>
+                  <a href="#" class="btn btn-warning fw-semibold">CONOCER MÁS</a>
                 </div>
               </div>
         </div>
         <div class="col-12 col-sm-12 col-md-6 col-lg-3">
-            <div class="card mt-3 border border-success rounded-4" style="width: 18rem;">
+            <div class="card mt-3 border border-danger rounded-4 border border-2" style="width: 18rem;">
                 <img src="imagenes/KHONWA.jpg" class="card-img-top rounded-4" alt="..." style="max-height: 240px;">
                 <div class="card-body text-center">
                   <h5 class="card-title">KHON WA</h5>
                   <p class="card-text">Mejor sabor, Imposible! Chifa, Pollos a la Brasa y Parrillas..</p>
-                  <a href="#" class="btn btn-primary">CONOCER MÁS</a>
+                  <a href="#" class="btn btn-warning fw-semibold">CONOCER MÁS</a>
                 </div>
               </div>
         </div>
         <div class="col-12 col-sm-12 col-md-6 col-lg-3">
-            <div class="card mt-3 border border-success rounded-4" style="width: 18rem;">
+            <div class="card mt-3 border border-danger rounded-4 border border-2" style="width: 18rem;">
                 <img src="imagenes/willlon02.jpg" class="card-img-top rounded-4" alt="..." style="max-height: 240px;">
                 <div class="card-body text-center ">
                   <h5 class="card-title">POLLOS BROSTER WILLON</h5>
                   <p class="card-text">Desde 1986, TRADICIÓN UCAYALINA..</p>
-                  <a href="#" class="btn btn-primary">CONOCER MÁS</a>
+                  <a href="#" class="btn btn-warning fw-semibold">CONOCER MÁS</a>
                 </div>
               </div>
         </div>
@@ -109,21 +116,21 @@
     
 
     <footer>
-      <div class="container-fluid bg-danger p-5 mt-2">
+      <div class="container-fluid p-5 mt-2 " style="background-color: #EDECD9;">
         <div class="row">
           <div class="col">
-            <a href="https://www.youtube.com/watch?v=-ZInT4p9hH8&t=2618s" class="text-decoration-none text-white">TUTORIAL BOOTSTRAP <i class="bi bi-youtube"></i></a>
+            <a href="https://www.youtube.com/watch?v=-ZInT4p9hH8&t=2618s" class="text-decoration-none text-black">TUTORIAL BOOTSTRAP <i class="bi bi-youtube"></i></a>
           </div>
-          <div class="col text-white">
+          <div class="col text-black">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam nulla exercitationem beatae voluptate aliquid eveniet numquam necessitatibus! Minima fugit, autem deleniti ut, est assumenda, non culpa blanditiis suscipit adipisci qui.
           </div>
-          <div class="col text-white">
+          <div class="col text-black">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint, labore? Quae, provident dolorum! Voluptates quia neque tempore dolorum in tempora perferendis delectus, itaque quis eaque quod. Enim suscipit nisi eaque?
           </div>
         </div>
       </div>
     </footer>
 
-      <link rel="stylesheet" href="style.css">
+      
 </body>
 </html>

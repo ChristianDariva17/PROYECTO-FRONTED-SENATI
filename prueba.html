@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Filtro de Búsqueda con Categorías</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .resultado {
+      display: none; /* Ocultar los resultados por defecto */
+    }
+    .visible {
+      display: block; /* Hacer visible los elementos filtrados */
+    }
+    .card {
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-4">
+    <h2>Filtro de Búsqueda</h2>
+    
+    <!-- Filtro de búsqueda y categorías -->
+    <div class="d-flex mb-3">
+      <input class="form-control m-2 border border-3 border-dark-subtle" type="search" id="busqueda" placeholder="Buscar..." aria-label="Search" onkeyup="filtrar()">
+      
+      <select class="form-select m-2" id="categoria" onchange="filtrar()">
+        <option value="">Todas las Categorías</option>
+        <option value="electronica">Electrónica</option>
+        <option value="ropa">Ropa</option>
+        <option value="hogar">Hogar</option>
+      </select>
+    </div>
+    
+    <!-- Resultados -->
+    <div id="resultados">
+      <div class="card resultado electronica">
+        <div class="card-body">
+          <h5 class="card-title">Televisor 4K</h5>
+          <p class="card-text">Electrónica - 500 USD</p>
+        </div>
+      </div>
+      <div class="card resultado ropa">
+        <div class="card-body">
+          <h5 class="card-title">Camiseta Deportiva</h5>
+          <p class="card-text">Ropa - 20 USD</p>
+        </div>
+      </div>
+      <div class="card resultado hogar">
+        <div class="card-body">
+          <h5 class="card-title">Vaso Térmico</h5>
+          <p class="card-text">Hogar - 10 USD</p>
+        </div>
+      </div>
+      <div class="card resultado electronica">
+        <div class="card-body">
+          <h5 class="card-title">Smartphone 5G</h5>
+          <p class="card-text">Electrónica - 800 USD</p>
+        </div>
+      </div>
+      <div class="card resultado ropa">
+        <div class="card-body">
+          <h5 class="card-title">Pantalones Jeans</h5>
+          <p class="card-text">Ropa - 40 USD</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Función que se ejecuta al escribir o cambiar los filtros
+    function filtrar() {
+      const busqueda = document.getElementById('busqueda').value.toLowerCase();
+      const categoria = document.getElementById('categoria').value.toLowerCase();
+      const resultados = document.querySelectorAll('.resultado');
+
+      resultados.forEach(function(resultado) {
+        const texto = resultado.innerText.toLowerCase();
+        const coincideBusqueda = texto.includes(busqueda);
+        const coincideCategoria = categoria === '' || resultado.classList.contains(categoria);
+
+        if (coincideBusqueda && coincideCategoria) {
+          resultado.classList.add('visible');
+        } else {
+          resultado.classList.remove('visible');
+        }
+      });
+    }
+  </script>
+</body>
+</html>
