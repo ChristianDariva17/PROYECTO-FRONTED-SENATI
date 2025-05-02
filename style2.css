@@ -1,0 +1,214 @@
+.navbar-fixed{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+body{
+    padding-top: 90px; /* espacio para que no se oculte el contenido */
+    height: 100vh;
+}
+.logo{
+    width: 50px;
+    height: 50px;
+}
+.btn{
+    background-color: #F6A500;
+    width: 70%;
+    height: 40%;
+}
+
+
+
+
+
+
+.img-nego{
+    width: 85%;
+    height: auto;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.fila-uno{
+    border: 3px solid black; /* Establece un borde de 2 píxeles de grosor, sólido y de color azul */
+    padding: 5px;        /* Añade un espacio interno de 15 píxeles alrededor del contenido */
+    margin: 10px;  /* Añade un margen inferior de 20 píxeles para separarlo de otros elementos */
+    text-align: left;
+    background-color: #f9f9f9;
+    border-radius: 20px;
+    margin-top: 30px;
+}
+
+/*CONTENEDORES comentarios de los usuarios */
+
+body {
+    font-family: Arial, sans-serif;
+    
+    background: #f9f9f9;
+  }
+
+  .container {
+    max-width: 700px;
+    margin: auto;
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+
+  select {
+    margin-bottom: 20px;
+    padding: 8px;
+    font-size: 1rem;
+  }
+
+  .review {
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+  }
+
+  .stars {
+    color: gold;
+  }
+
+  .actions {
+    margin-top: 5px;
+  }
+
+  .actions button {
+    margin-right: 10px;
+    cursor: pointer;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    background: #eee;
+  }
+
+  .comments {
+    margin-top: 10px;
+  }
+
+  .comments input {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+  }
+
+  .comment-list {
+    margin-top: 10px;
+    padding-left: 10px;
+    border-left: 2px solid #ccc;
+  }
+
+  .comment-list p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    color: #333;
+  }
+
+
+/* CONTENEDOR DE COMENTARIo personal */
+
+
+body {
+    font-family: Arial, sans-serif;
+    
+    background: #f4f4f4;
+  }
+  .review-section {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: auto;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+  .stars {
+    display: flex;
+    gap: 5px;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #ccc;
+  }
+  .stars .star.filled {
+    color: gold;
+  }
+  textarea {
+    width: 100%;
+    height: 100px;
+    margin-top: 15px;
+    padding: 10px;
+    font-size: 1rem;
+  }
+  input[type="file"] {
+    margin-top: 15px;
+  }
+  .preview {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .preview img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    background: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  button:hover {
+    background: #0056b3;
+  }
+
+
+
+  /* PROMEDIO VISUAL DEL RESTAURANTE*/
+
+  body {
+    font-family: Arial, sans-serif;
+    
+    
+    
+  }
+
+  .star-rating {
+    font-size: 2rem;
+    color: #ccc;
+    display: inline-block;
+  }
+
+  .star-rating .filled {
+    color: gold;
+  }
+
+  .star-rating .half {
+    color: gold;
+    position: relative;
+  }
+
+  .star-rating .half::before {
+    content: '★';
+    position: absolute;
+    left: 0;
+    width: 50%;
+    overflow: hidden;
+    color: gold;
+  }
+
+  .rating-value {
+    margin-top: 10px;
+    font-size: 1.2rem;
+  }

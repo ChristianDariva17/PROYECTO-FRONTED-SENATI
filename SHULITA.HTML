@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHULITA</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    
+    <nav class="navbar navbar-expand-lg navbar-fixed" style="background-color: #EDECD9;">
+        <div class="container-fluid">
+            <img class="logo" src="imagenes/loro (1).png" alt="img-thumbnail">
+          <a class="navbar-brand m-3 text-black fw-semibold " href="#">MIKHUY PERÚ</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item m-2">
+                <a class="nav-link active text-black fw-semibold" aria-current="page" href="#">Recientes</a>
+              </li>
+              <li class="nav-item m-2">
+                <a class="nav-link text-black fw-semibold" href="#">Lo nuevo</a>
+              </li>
+              <li class="nav-item dropdown m-2">
+                <a class="nav-link dropdown-toggle text-black fw-semibold" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+            </ul>
+
+            <form class="d-flex" role="search">
+              <input class="form-control m-2 border border-3 border border-dark-subtle" type="search" placeholder="Busqueda" aria-label="Search">
+              <select class="form-select m-2" id="categoria" onchange="filtrar()">
+                <option value="">Todas las Categorías</option>
+                <option value="Pollerias">Pollerias</option>
+                <option value="Chifa">Chifa</option>
+                <option value="Marina">Marina</option>
+              </select>
+              <button class="btn btn-warning m-2 text-black fw-bold" type="button">INICIAR SESIÓN</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    
+      <!--CONTENIDO-->
+
+      <div class="row">
+        <div class="col container-review">
+            <div class="container-fluid">
+
+                <div class="row fila-uno">
+                  <div class="col">
+                    <img src="imagenes/shulita.png" alt="" class="img-nego">
+                  </div>
+                  <div class="col">
+                    <h1>SHULITA BRASA</h1>
+                    <p>Shulita Brasa es sabor y tradición en Pucallpa desde 1975.</p>
+                    <h2>Promedio de Calificación</h2>
+                      <div class="star-rating" id="avgRatingStars"></div>
+                      <div class="rating-value" id="avgRatingValue"></div>
+                  </div>
+                </div>
+                
+                <div class="row fila-uno">
+                  <div class="review-section">
+                    <h2>Escribe tu reseña</h2>
+                    
+                    <div class="stars" id="starRating">
+                      <span class="star" data-value="1">&#9733;</span>
+                      <span class="star" data-value="2">&#9733;</span>
+                      <span class="star" data-value="3">&#9733;</span>
+                      <span class="star" data-value="4">&#9733;</span>
+                      <span class="star" data-value="5">&#9733;</span>
+                    </div>
+                  
+                    <textarea placeholder="Escribe tu reseña aquí..."></textarea>
+                    
+                    <input type="file" multiple id="imageUpload" accept="image/*">
+                    
+                    <div class="preview" id="imagePreview"></div>
+                    
+                    <button>Enviar Reseña</button>
+                  </div>
+                </div>
+
+                
+            </div>
+        </div>
+        <div class="col container-review">
+            <div class="container-fluid fila-uno">
+              <div class="container">
+                <h2>Reseñas de Usuarios</h2>
+                <label for="sort">Ordenar por:</label>
+                <select id="sort">
+                  <option value="date">Fecha (más reciente)</option>
+                  <option value="ratingHigh">Calificación (más alta)</option>
+                  <option value="ratingLow">Calificación (más baja)</option>
+                  <option value="useful">Utilidad (más votos)</option>
+                </select>
+              
+                <div id="reviewList"></div>
+              </div>
+
+            </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="container-fluid p-5 mt-2 " style="background-color: #EDECD9;">
+          <div class="row">
+            <div class="col">
+              <a href="https://www.youtube.com/watch?v=-ZInT4p9hH8&t=2618s" class="text-decoration-none text-black">TUTORIAL BOOTSTRAP <i class="bi bi-youtube"></i></a>
+            </div>
+            <div class="col text-black">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam nulla exercitationem beatae voluptate aliquid eveniet numquam necessitatibus! Minima fugit, autem deleniti ut, est assumenda, non culpa blanditiis suscipit adipisci qui.
+            </div>
+            <div class="col text-black">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint, labore? Quae, provident dolorum! Voluptates quia neque tempore dolorum in tempora perferendis delectus, itaque quis eaque quod. Enim suscipit nisi eaque?
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <script src="OPERACION.JS"></script>
+</body>
+</html>

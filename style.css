@@ -50,4 +50,10 @@
 
 body{
     padding-top: 90px; /* espacio para que no se oculte el contenido */
-  }
+    height: 100vh;
+}
+
+.container-review{
+    text-align: center;
+}
+
