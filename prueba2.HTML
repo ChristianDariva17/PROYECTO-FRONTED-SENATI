@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Detectar Ubicación</title>
+  <style>
+    #ubicacion-container {
+      margin-top: 20px;
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+      text-align: center;
+    }
+
+    #ubicacion {
+      font-weight: bold;
+      color: #333;
+    }
+
+    .error-message {
+      color: red;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Detección de Ubicación</h1>
+
+  <div id="ubicacion-container">
+    <p>Ubicación:</p>
+    <div id="ubicacion">Cargando ubicación...</div>
+  </div>
+
+  <script>
+    function obtenerUbicacion() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(mostrarUbicacion, mostrarError);
+      } else {
+        document.getElementById("ubicacion").innerHTML = "<span class='error-message'>La geolocalización no es soportada por este navegador.</span>";
+      }
+    }
+
+    function mostrarUbicacion(posicion) {
+      const latitud = posicion.coords.latitude;
+      const longitud = posicion.coords.longitude;
+      document.getElementById("ubicacion").innerHTML = `Latitud: <span class='ubicacion-dato'>${latitud}</span><br>Longitud: <span class='ubicacion-dato'>${longitud}</span>`;
+      // Aquí podrías usar las coordenadas para mostrar un mapa, etc.
+    }
+
+    function mostrarError(error) {
+      let mensajeError = "";
+      switch (error.code) {
+        case error.PERMISSION_DENIED:
+          mensajeError = "<span class='error-message'>El usuario denegó la solicitud de geolocalización.</span>";
+          break;
+        case error.POSITION_UNAVAILABLE:
+          mensajeError = "<span class='error-message'>La información de ubicación no está disponible.</span>";
+          break;
+        case error.TIMEOUT:
+          mensajeError = "<span class='error-message'>La solicitud para obtener la ubicación del usuario ha expirado.</span>";
+          break;
+        case error.UNKNOWN_ERROR:
+          mensajeError = "<span class='error-message'>Ocurrió un error desconocido.</span>";
+          break;
+      }
+      document.getElementById("ubicacion").innerHTML = mensajeError;
+    }
+
+    window.onload = obtenerUbicacion;
+  </script>
+
+</body>
+</html>

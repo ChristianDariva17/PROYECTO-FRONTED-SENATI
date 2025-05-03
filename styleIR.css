@@ -1,0 +1,131 @@
+* {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    font-family: "Helvetica Neue", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+  }
+
+  .login-wrapper {
+    padding: 40px 30px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+
+  .login-wrapper img{
+    width: auto;
+    height: 150PX;
+  }
+
+  .login-wrapper h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: normal;
+  }
+
+  .form-group {
+    position: relative;
+    margin-bottom: 25px;
+    text-align: center;
+  }
+  .form-group a{
+    color: #aaaaaa;
+    text-decoration: none;
+  }
+
+  .form-group input {
+    width: 100%;
+    padding: 16px 12px 8px;
+    font-size: 16px;
+    height: 35px;
+    border: 1px solid #555;
+    border-radius: 35px;
+    outline: none;
+    background-color: transparent;
+    transition: border-color 0.2s;
+  }
+
+  .form-group label {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    background-color: #f9f9f9;
+    padding: 0 6px;
+    color: #9ca3af;
+    pointer-events: none;
+    transition: all 0.2s ease;
+  }
+
+  .form-group input:focus {
+    border-color: #F6A500;
+  }
+
+  .form-group input:focus + label,
+  .form-group input:not(:placeholder-shown) + label{
+    top: 6px;
+    font-size: 12px;
+    color: #F6A500;
+  }
+
+  button {
+    width: 100%;
+    padding: 12px;
+    background-color: #F6A500;
+    color: black;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #F6A500;
+  }
+
+  .footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 13px;
+    color: #aaaaaa;
+  }
+
+  .footer a {
+    color: #F6A500;
+    text-decoration: none;
+  }
+
+  .footer a:hover {
+    text-decoration: underline;
+  }
+
+  /* 📱 Estilos responsivos para pantallas pequeñas */
+  @media (max-width: 480px) {
+    .login-wrapper {
+      padding: 30px 20px;
+      border-radius: 8px;
+    }
+
+    .login-wrapper h2 {
+      font-size: 22px;
+    }
+
+    button {
+      font-size: 15px;
+    }
+
+    .form-group input {
+      font-size: 15px;
+    }
+  }

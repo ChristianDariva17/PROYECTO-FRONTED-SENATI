@@ -21,10 +21,10 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item m-2">
-                <a class="nav-link active text-black fw-semibold" aria-current="page" href="#">Recientes</a>
+                <a class="nav-link active text-black fw-semibold" aria-current="page" href="INICIO.HTML">INICIO</a>
               </li>
               <li class="nav-item m-2">
-                <a class="nav-link text-black fw-semibold" href="#">Lo nuevo</a>
+                <a class="nav-link text-black fw-semibold" href="#">PERFIL</a>
               </li>
               <li class="nav-item dropdown m-2">
                 <a class="nav-link dropdown-toggle text-black fw-semibold" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -55,50 +55,57 @@
     
       <!--CONTENIDO-->
 
-      <div class="row">
+      
         <div class="col container-review">
             <div class="container-fluid">
+                <div class="row">
 
-                <div class="row fila-uno">
-                  <div class="col">
-                    <img src="imagenes/shulita.png" alt="" class="img-nego">
+                  <div class="col carrousel-info">
+                    <div id="carouselExampleSlidesOnly" class="carousel slide " data-bs-ride="carousel">
+                      <div class="carousel-inner rounded-3" style="max-height: 850px;">
+                        <div class="carousel-item active">
+                          <img src="imagenes/ceviche.jpeg" class="rounded-3 w-75" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                          <img src="imagenes/pollo asado.jpg" class="rounded-3 w-75" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                          <img src="imagenes/pescado fritp.jpeg" class="rounded-3 w-75" alt="...">
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div class="col">
+
+                  <div class="col info-restaurant">
                     <h1>SHULITA BRASA</h1>
                     <p>Shulita Brasa es sabor y tradición en Pucallpa desde 1975.</p>
-                    <h2>Promedio de Calificación</h2>
-                      <div class="star-rating" id="avgRatingStars"></div>
-                      <div class="rating-value" id="avgRatingValue"></div>
+                    <h5><i class="bi bi-geo-alt-fill">  <a href="https://maps.app.goo.gl/7hLx8oMGXNVHVQXY8">Av. Saenz Peña # 601, Pucallpa, Peru</a> </i></h5>
+                    <h5><i class="bi bi-telephone-fill"> (061) 571347 </i><h5>
+                    <h5><i class="bi bi-clock-fill"> Lunes a Domingo de 12 pm - 12 pm</i></h5>
+                    
                   </div>
                 </div>
                 
-                <div class="row fila-uno">
-                  <div class="review-section">
-                    <h2>Escribe tu reseña</h2>
-                    
-                    <div class="stars" id="starRating">
-                      <span class="star" data-value="1">&#9733;</span>
-                      <span class="star" data-value="2">&#9733;</span>
-                      <span class="star" data-value="3">&#9733;</span>
-                      <span class="star" data-value="4">&#9733;</span>
-                      <span class="star" data-value="5">&#9733;</span>
-                    </div>
-                  
-                    <textarea placeholder="Escribe tu reseña aquí..."></textarea>
-                    
-                    <input type="file" multiple id="imageUpload" accept="image/*">
-                    
-                    <div class="preview" id="imagePreview"></div>
-                    
-                    <button>Enviar Reseña</button>
+                <div class="row">
+                  <div class="ubicacion">
+                  <h5><i class="bi bi-geo-alt-fill"></i>UBICACIÓN</h5>
+                  </div>
+                  <div class="mapa-responsive">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3947.243669556519!2d-74.53804282490694!3d-8.377676091659923!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91a3bce60969d537%3A0x7a1a12de108ea19f!2sPoller%C3%ADa%20Shulita!5e0!3m2!1ses!2spe!4v1746243881326!5m2!1ses!2spe" 
+                  width="600" 
+                  height="450"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                  ></iframe>
                   </div>
                 </div>
-
-                
             </div>
         </div>
+
         <div class="col container-review">
-            <div class="container-fluid fila-uno">
+            <div class="container-fluid ">
               <div class="container">
                 <h2>Reseñas de Usuarios</h2>
                 <label for="sort">Ordenar por:</label>
@@ -111,10 +118,31 @@
               
                 <div id="reviewList"></div>
               </div>
-
             </div>
+
+            <div class="review-section">
+
+              <h2>Escribe tu reseña</h2>
+              
+              <div class="stars" id="starRating">
+                <span class="star" data-value="1">&#9733;</span>
+                <span class="star" data-value="2">&#9733;</span>
+                <span class="star" data-value="3">&#9733;</span>
+                <span class="star" data-value="4">&#9733;</span>
+                <span class="star" data-value="5">&#9733;</span>
+              </div>
+            
+              <textarea placeholder="Escribe tu reseña aquí..."></textarea>
+              
+              <input type="file" multiple id="imageUpload" accept="image/*">
+              
+              <div class="preview" id="imagePreview"></div>
+              
+              <button>Enviar Reseña</button>
+            </div>
+
         </div>
-      </div>
+      
 
       <footer>
         <div class="container-fluid p-5 mt-2 " style="background-color: #EDECD9;">

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notificaciones de Reseñas</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .notification-container {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+
+    .notification {
+      background-color: #f9f9f9;
+      border: 1px solid #eee;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+      padding: 15px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .notification-icon {
+      margin-right: 10px;
+      font-size: 1.2em;
+      color: #007bff;
+    }
+
+    .notification-message {
+      flex-grow: 1;
+    }
+
+    .notification-close-btn {
+      background: none;
+      border: none;
+      color: #aaa;
+      cursor: pointer;
+      font-size: 1em;
+      margin-left: 10px;
+    }
+
+    .notification-close-btn:hover {
+      color: #333;
+    }
+
+    .notification-comment {
+      border-left: 5px solid #28a745;
+    }
+
+    .notification-review {
+      border-left: 5px solid #ffc107;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Ejemplo de Notificaciones</h1>
+  <p>Aquí se mostrarían las notificaciones en la esquina superior derecha.</p>
+
+  <div class="notification-container">
+    <div class="notification notification-comment">
+      <span class="notification-icon">&#128172;</span>
+      <span class="notification-message">
+        <strong>Nuevo comentario:</strong> Alguien ha comentado en tu reseña de "El Rincón del Sabor". <a href="#">Ver comentario</a>
+      </span>
+      <button class="notification-close-btn">&times;</button>
+    </div>
+
+    <div class="notification notification-review">
+      <span class="notification-icon">&#128203;</span>
+      <span class="notification-message">
+        <strong>Nueva reseña:</strong> "Pizzería Bella Italia" tiene una nueva reseña. <a href="#">Ver reseña</a>
+      </span>
+      <button class="notification-close-btn">&times;</button>
+    </div>
+
+    </div>
+
+</body>
+</html>
