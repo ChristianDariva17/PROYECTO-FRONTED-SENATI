@@ -6,10 +6,14 @@
     <title>SHULITA</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="stylePages.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="icon" type="image/png" href="imagenes/logo03.png" sizes="16x16">
 </head>
 <body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+<<<<<<< HEAD
     
     <nav class="navbar navbar-expand-lg navbar-fixed" style="background-color: #EDECD9;">
         <div class="container-fluid">
@@ -38,23 +42,55 @@
                 </ul>
               </li>
             </ul>
+=======
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">MIKHUY</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="INICIO.HTML">INICIO</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">RESTAURANTES</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">CONTACTO</a>
+        </li>
+      </ul>
+      <a href="LOGIN.html"><button class="btn-iniciar-sesion" type="submit" href="LOGIN.html">INICIAR SESIÓN</button></a>
+    </div>
+  </div>
+</nav>
+>>>>>>> d0331da (probando)
 
-            <form class="d-flex" role="search">
-              <input class="form-control m-2 border border-3 border border-dark-subtle" type="search" placeholder="Busqueda" aria-label="Search">
-              <select class="form-select m-2" id="categoria" onchange="filtrar()">
-                <option value="">Todas las Categorías</option>
-                <option value="Pollerias">Pollerias</option>
-                <option value="Chifa">Chifa</option>
-                <option value="Marina">Marina</option>
-              </select>
-              <button class="btn btn-warning m-2 text-black fw-bold" type="button">INICIAR SESIÓN</button>
-            </form>
-          </div>
-        </div>
-      </nav>
-    
-      <!--CONTENIDO-->
+<div class="resena-container">
+  <div class="resena-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px;">
+    <h2 style="margin: 0;">SHULITA BRASA</h2>
+    <div style="display: flex; gap: 8px;">
+      <button type="button" data-bs-toggle="modal" data-bs-target="#modalResena">Escribir Reseña</button>
+      <button type="button" >Guardar</button>
+    </div>
+  </div>
+  <div class="resena-info" style="margin-bottom: 18px;">
+    <span style="font-size: 1.2em; font-weight: bold;">4.5</span>
+    <span style="color: #ffd700; font-size: 1.2em; margin: 0 8px;">★★★★★</span>
+    <span style="color: #888;">(32 reseñas)</span>
+  </div>
+  <div class="resena-carrusel" style="width: 100%; overflow: hidden;">
+    <div style="display: flex; gap: 12px;">
+      <img src="imagenes/shulita.png" alt="Imagen 1" style="width: 120px; height: 80px; object-fit: cover; border-radius: 6px;">
+      <img src="imagenes/SHULITA 02.jpg" alt="Imagen 2" style="width: 120px; height: 80px; object-fit: cover; border-radius: 6px;">
+      <img src="imagenes/SHULITA 03.jpg" alt="Imagen 3" style="width: 120px; height: 80px; object-fit: cover; border-radius: 6px;">
+      <!-- Puedes agregar más imágenes aquí -->
+    </div>
+  </div>
+</div>
 
+<<<<<<< HEAD
       
         <div class="col container-review">
             <div class="container-fluid">
@@ -156,10 +192,228 @@
             <div class="col text-black">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint, labore? Quae, provident dolorum! Voluptates quia neque tempore dolorum in tempora perferendis delectus, itaque quis eaque quod. Enim suscipit nisi eaque?
             </div>
+=======
+<!-- ...existing code... -->
+<!-- Modal de Reseña -->
+<div class="modal fade" id="modalResena" tabindex="-1" aria-labelledby="modalResenaLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalResenaLabel">Escribir Reseña</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="nombreUsuario" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="nombreUsuario" placeholder="Tu nombre">
+>>>>>>> d0331da (probando)
           </div>
-        </div>
-      </footer>
+          <div class="mb-3">
+            <label for="calificacion" class="form-label">Calificación</label>
+            <select class="form-select" id="calificacion">
+              <option value="5">★★★★★</option>
+              <option value="4">★★★★</option>
+              <option value="3">★★★</option>
+              <option value="2">★★</option>
+              <option value="1">★</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="tituloResena" class="form-label">Título</label>
+            <input type="text" class="form-control" id="tituloResena" placeholder="Título de tu reseña">
+          </div>
+          <div class="mb-3">
+            <label for="comentarioResena" class="form-label">Comentario</label>
+            <textarea class="form-control" id="comentarioResena" rows="3" placeholder="Escribe tu comentario"></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="imagenesResena" class="form-label">Subir imágenes</label>
+            <input type="file" class="form-control" id="imagenesResena" name="imagenesResena[]" accept="image/*" multiple>
+            <div id="previewImagenes" style="display: flex; gap: 10px; margin-top: 10px; flex-wrap: wrap;"></div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary">Guardar Reseña</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ...existing code... -->
 
-      <script src="OPERACION.JS"></script>
+
+<div class="info-restaurante-container">
+  <!-- Columna 1 -->
+  <div class="info-restaurante-col">
+    <h3>Información</h3>
+    <ul class="info-lista">
+      <li><strong>Dirección:</strong> Jr. Amazonas 123, Pucallpa</li>
+      <li><strong>Teléfono:</strong> 061-123456</li>
+      <li><strong>Precios:</strong> S/ 15 - S/ 50</li>
+    </ul>
+    <h4>Características</h4>
+    <ul class="caracteristicas-lista">
+      <li>Comida a la brasa</li>
+      <li>Ambiente familiar</li>
+      <li>WiFi gratis</li>
+      <li>Estacionamiento</li>
+      <li>Delivery disponible</li>
+    </ul>
+    <h4>Ubicación</h4>
+    <div class="mapa-ubicacion">
+      <!-- Puedes reemplazar el src con el link de Google Maps de tu restaurante -->
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3947.2436695565193!2d-74.53804282490695!3d-8.37767609165992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91a3bce60969d537%3A0x7a1a12de108ea19f!2sPoller%C3%ADa%20Shulita!5e0!3m2!1ses-419!2spe!4v1747858748463!5m2!1ses-419!2spe" 
+      width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+  <!-- Columna 2 -->
+  <div class="info-restaurante-col horario">
+    <h3>Horario de atención</h3>
+    <table class="tabla-horario">
+      <tr><td>Lunes</td><td>12:00 pm - 11:00 pm</td></tr>
+      <tr><td>Martes</td><td>12:00 pm - 11:00 pm</td></tr>
+      <tr><td>Miércoles</td><td>12:00 pm - 11:00 pm</td></tr>
+      <tr><td>Jueves</td><td>12:00 pm - 11:00 pm</td></tr>
+      <tr><td>Viernes</td><td>12:00 pm - 12:00 am</td></tr>
+      <tr><td>Sábado</td><td>12:00 pm - 12:00 am</td></tr>
+      <tr><td>Domingo</td><td>12:00 pm - 10:00 pm</td></tr>
+    </table>
+  </div>
+</div>
+
+<div class="opiniones-container">
+  <!-- Filtros de opiniones -->
+  <div class="opiniones-filtros">
+    <div class="filtro-fecha">
+      <label for="filtroFecha"><strong>Filtrar por fecha:</strong></label>
+      <select id="filtroFecha">
+        <option value="todas">Todas</option>
+        <option value="recientes">Más recientes</option>
+        <option value="antiguas">Más antiguas</option>
+      </select>
+    </div>
+    <div class="filtro-valoracion">
+      <label for="filtroValoracion"><strong>Ordenar por:</strong></label>
+      <select id="filtroValoracion">
+        <option value="mejor">Mejor valoración</option>
+        <option value="peor">Peor valoración</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Opinión individual -->
+  <div class="opinion">
+    <div class="opinion-header">
+      <div class="opinion-usuario">
+        <span class="usuario-nombre">Juan Pérez</span>
+        <span class="opinion-estrellas">★★★★★</span>
+      </div>
+      <div class="opinion-actions">
+        <button class="btn-like" title="Me gusta">&#128077;</button>
+        <button class="btn-dislike" title="No me gusta">&#128078;</button>
+      </div>
+    </div>
+    <div class="opinion-titulo">
+      <strong>¡Excelente experiencia!</strong>
+    </div>
+    <div class="opinion-comentario">
+      La comida estuvo deliciosa y la atención fue muy buena. ¡Recomiendo el pollo a la brasa!
+    </div>
+    <div class="opinion-carrusel">
+      <img src="imagenes/shulita.png" alt="Foto opinión 1">
+      <img src="imagenes/opinion2.jpg" alt="Foto opinión 2">
+    </div>
+    <div class="opinion-fecha">
+      20 de mayo de 2025
+    </div>
+  </div>
+  <!-- Opinión individual -->
+  <div class="opinion">
+    <div class="opinion-header">
+      <div class="opinion-usuario">
+        <span class="usuario-nombre">Luis Gonzalez</span>
+        <span class="opinion-estrellas">★★★★</span>
+      </div>
+      <div class="opinion-actions">
+        <button class="btn-like" title="Me gusta">&#128077;</button>
+        <button class="btn-dislike" title="No me gusta">&#128078;</button>
+      </div>
+    </div>
+    <div class="opinion-titulo">
+      <strong>¡Excelente experiencia!</strong>
+    </div>
+    <div class="opinion-comentario">
+      La comida estuvo deliciosa y la atención fue muy buena. ¡Recomiendo el pollo a la brasa!
+    </div>
+    <div class="opinion-carrusel">
+      <img src="imagenes/SHULITA 02.jpg" alt="Foto opinión 1">
+      <img src="imagenes/opinion2.jpg" alt="Foto opinión 2">
+    </div>
+    <div class="opinion-fecha">
+      21 de mayo de 2025
+    </div>
+  </div>
+  <!-- Opinión individual -->
+  <div class="opinion">
+    <div class="opinion-header">
+      <div class="opinion-usuario">
+        <span class="usuario-nombre">Manuela Rodríguez</span>
+        <span class="opinion-estrellas">★★★</span>
+      </div>
+      <div class="opinion-actions">
+        <button class="btn-like" title="Me gusta">&#128077;</button>
+        <button class="btn-dislike" title="No me gusta">&#128078;</button>
+      </div>
+    </div>
+    <div class="opinion-titulo">
+      <strong>¡Excelente experiencia!</strong>
+    </div>
+    <div class="opinion-comentario">
+      La comida estuvo deliciosa y la atención fue muy buena. ¡Recomiendo el pollo a la brasa!
+    </div>
+    <div class="opinion-carrusel">
+      <img src="imagenes/SHULITA 03.jpg" alt="Foto opinión 1">
+      <img src="imagenes/opinion2.jpg" alt="Foto opinión 2">
+    </div>
+    <div class="opinion-fecha">
+      22 de mayo de 2025
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-col">
+      <h5>Información de contacto</h5>
+      <ul>
+        <li>Dirección: Av. Centenario 1642</li>
+        <li>Teléfono: 555-555-5555</li>
+        <li>Correo electrónico: <a href="mailto:info@example.com">info@example.com</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Redes sociales</h5>
+      <ul>
+        <li><a href="#" target="_blank">Facebook</a></li>
+        <li><a href="#" target="_blank">Twitter</a></li>
+        <li><a href="#" target="_blank">Instagram</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Enlaces importantes</h5>
+      <ul>
+        <li><a href="#">Política de privacidad</a></li>
+        <li><a href="#">Términos y condiciones</a></li>
+        <li><a href="#">Ayuda y soporte</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 Mi Sitio Web. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<script src="SHULITA.JS"></script>
 </body>
-</html>

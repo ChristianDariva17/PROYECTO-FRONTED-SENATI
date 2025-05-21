@@ -1,0 +1,475 @@
+/* NAVBAR*/
+.navbar {
+  background-color: #fff;
+  padding: 1em;
+  transition: background-color 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-family: 'Montserrat', sans-serif; /* Agregada tipografía Montserrat */
+  font-weight: bold;
+}
+
+.navbar-brand {
+  font-size: 2em;
+  color: #000;
+  transition: color 0.2s ease;
+  animation: desintegrar 2s ease-in-out infinite;
+}
+
+.navbar-brand:hover {
+  color: #333;
+}
+
+.navbar-toggler {
+  border: none;
+  background-color: transparent;
+  padding: 0.5em;
+  font-size: 1.5em;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.navbar-toggler:hover {
+  transform: rotate(180deg);
+}
+
+.navbar-toggler-icon {
+  font-size: 1.5em;
+  color: #000;
+}
+
+.collapse {
+  transition: max-height 0.2s ease;
+}
+
+.navbar-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  margin-left: auto;
+  align-items: center;
+}
+
+.nav-item {
+  margin-right: 20px;
+}
+
+.nav-link {
+  color: #000;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  animation: desintegrar 2s ease-in-out infinite;
+}
+
+.nav-link:hover {
+  color: #333;
+}
+
+.nav-link.active {
+  color: #4CAF50;
+}
+
+.btn-iniciar-sesion {
+  background-color: #fff; /* fondo blanco */
+  color: #F6A500; /* texto del color del borde */
+  border: 1px solid #F6A500; /* borde del mismo color */
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-iniciar-sesion:hover {
+  background-color: #F6A500; /* fondo del color del borde al pasar el cursor */
+  color: #fff; /* texto blanco al pasar el cursor */
+  box-shadow: 0px 15px 20px rgba(246, 165, 0, 0.4);
+  transform: translateY(-3px);
+}
+.btn-iniciar-sesion:active {
+  transform: translateY(2px);
+}
+
+.navbar-brand {
+  font-size: 2em;
+  color: #000;
+  position: relative;
+}
+
+.nav-link{
+  color: #000;
+  position: relative;
+}
+
+.nav-link::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #333;
+  transition: width 0.2s ease;
+}
+
+.nav-link:hover::after{
+  animation: cargar 0.5s ease-in-out;
+}
+
+@keyframes cargar {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+/* Contenedor principal de reseñas */
+.resena-container {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  max-width: 800px;
+  margin: 40px auto 32px auto;
+  padding: 32px 28px 24px 28px;
+  border: 1px solid #e0e0e0;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
+/* Header de reseñas */
+.resena-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.resena-header h2 {
+  margin: 0;
+  color: #000000;
+  font-size: 1.5em;
+  letter-spacing: 1px;
+  font-weight: bold;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
+
+.resena-header button {
+  padding: 8px 18px;
+  border-radius: 5px;
+  background: #F6A500;
+  color: #fff;
+  border: none;
+  font-weight: bold;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.resena-header button:hover {
+  background: #d08d07;
+}
+
+/* Info de calificación */
+.resena-info {
+  margin-bottom: 18px;
+  font-size: 1.1em;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.resena-info span:first-child {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.resena-info span:nth-child(2) {
+  color: #ffd700;
+  font-size: 1.3em;
+  margin: 0 8px;
+  letter-spacing: 2px;
+}
+
+.resena-info span:last-child {
+  color: #888;
+  font-size: 1em;
+}
+
+/* Carrusel de imágenes */
+.resena-carrusel {
+  width: 100%;
+  overflow-x: auto;
+  padding-bottom: 6px;
+}
+
+.resena-carrusel > div {
+  display: flex;
+  gap: 14px;
+}
+
+.resena-carrusel img {
+  width: 120px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.07);
+  border: 1px solid #e0e0e0;
+  transition: transform 0.2s;
+}
+.resena-carrusel img:hover {
+  transform: scale(1.05);
+  border-color: #007bff;
+}
+
+/* Info del restaurante */
+
+.info-restaurante-container {
+  display: flex;
+  gap: 32px;
+  max-width: 800px;
+  margin: 40px auto 32px auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  padding: 32px 28px;
+  border: 1px solid #e0e0e0;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
+.info-restaurante-col {
+  flex: 1;
+  min-width: 240px;
+}
+
+.info-restaurante-col h3 {
+  margin-top: 0;
+  color: #007bff;
+  font-size: 1.2em;
+  margin-bottom: 14px;
+}
+
+.info-lista,
+.caracteristicas-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 18px 0;
+}
+
+.info-lista li,
+.caracteristicas-lista li {
+  margin-bottom: 8px;
+  color: #444;
+  font-size: 1em;
+}
+
+.mapa-ubicacion {
+  margin-top: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #e0e0e0;
+  width: 400px;
+  height: 300px;
+}
+
+.horario {
+  max-width: 260px;
+}
+
+.tabla-horario {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 8px;
+}
+
+.tabla-horario td {
+  padding: 6px 10px;
+  border-bottom: 1px solid #f0f0f0;
+  color: #444;
+  font-size: 1em;
+}
+
+.tabla-horario tr:last-child td {
+  border-bottom: none;
+}
+
+/* OPINIONES */
+
+.opiniones-container {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  max-width: 800px;
+  margin: 40px auto 32px auto;
+  padding: 32px 28px 24px 28px;
+  border: 1px solid #e0e0e0;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
+.opiniones-filtros {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.filtro-fecha, .filtro-valoracion {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.opinion {
+  border-top: 1px solid #eee;
+  padding-top: 18px;
+}
+
+.opinion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+
+.opinion-usuario {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.usuario-nombre {
+  font-weight: bold;
+  color: #007bff;
+  font-size: 1.08em;
+}
+
+.opinion-estrellas {
+  color: #ffd700;
+  font-size: 1.1em;
+  letter-spacing: 1px;
+}
+
+.opinion-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-like, .btn-dislike {
+  background: #f5f5f5;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.2em;
+  cursor: pointer;
+  padding: 6px 10px;
+  transition: background 0.2s;
+}
+.btn-like:hover {
+  background: #d4f7d4;
+}
+.btn-dislike:hover {
+  background: #ffd6d6;
+}
+
+.opinion-titulo {
+  font-size: 1.08em;
+  margin-bottom: 4px;
+  color: #222;
+}
+
+.opinion-comentario {
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.opinion-carrusel {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+.opinion-carrusel img {
+  width: 90px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.07);
+}
+
+.opinion-fecha {
+  color: #888;
+  font-size: 0.97em;
+  text-align: right;
+}
+
+
+/* FOOTER */
+
+.footer {
+  background: #ededed;
+  color: #000000;
+  padding: 40px 0 0 0;
+  font-family: 'Montserrat', Arial, sans-serif;
+  margin-top: 40px;
+  border: #000000 1px solid;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  font-family: 'Helvetica', sans-serif; /* Agregada tipografía Helvetica */
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  gap: 32px;
+  justify-content: space-between;
+}
+
+.footer-col {
+  flex: 1 1 220px;
+  min-width: 220px;
+  margin-bottom: 24px;
+}
+
+.footer-col h5 {
+  color: #000000;
+  font-size: 1.15em;
+  margin-bottom: 16px;
+  letter-spacing: 1px;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+  font-size: 1em;
+}
+
+.footer-col ul li a {
+  color: #337ab7;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-col ul li a:hover {
+  color: #007bff;
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 18px 0;
+  background: #ededed;
+  color: #000000;
+  font-size: 0.97em;
+  margin-top: 16px;
+  border-top: 1px solid #333;
+}
