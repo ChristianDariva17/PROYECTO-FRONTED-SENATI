@@ -1,131 +1,304 @@
 * {
-    box-sizing: border-box;
-  }
+  box-sizing: border-box;
+}
 
-  body {
-    margin: 0;
-    padding: 0;
-    background-color: white;
-    font-family: "Helvetica Neue", sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    padding: 20px;
-  }
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(120deg, #f6a500 0%, #fffbe6 100%);
+  font-family: 'Montserrat', "Helvetica Neue", Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
 
+.login-wrapper {
+  padding: 40px 30px;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 370px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.13);
+  text-align: center;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px auto;
+  animation: modalFadeIn 0.5s;
+}
+
+.login-wrapper img {
+  width: 80px;
+  height: auto;
+  margin-bottom: 16px;
+}
+
+.login-wrapper h2 {
+  color: #f6a500;
+  font-size: 1.5em;
+  font-weight: 700;
+  margin-bottom: 35px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-group {
+  width: 100%;
+  max-width: 290px;
+  margin-bottom: 32px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 16px 14px 8px 14px;
+  font-size: 16px;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 35px;
+  outline: none;
+  background-color: #fafafa;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  margin-bottom: 0;
+  color: #222;
+}
+
+.form-group input:focus {
+  border-color: #F6A500;
+  box-shadow: 0 0 0 2px #ffe7b8;
+}
+
+.form-group label {
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #fff;
+  padding: 0 6px;
+  color: #9ca3af;
+  pointer-events: none;
+  transition: all 0.2s ease;
+  font-size: 1em;
+}
+
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label {
+  top: -12px;
+  left: 12px;
+  background: #fff;
+  padding: 0 4px;
+  font-size: 0.92em;
+  color: #f6a500;
+  font-weight: 500;
+  border-radius: 8px;
+  border: 1.5px solid #f6a500;
+  box-shadow: 0 0 0 2px #ffe7b8;
+}
+
+.form-group a {
+  color: #F6A500;
+  font-size: 0.98em;
+  text-decoration: none;
+  transition: color 0.2s;
+  width: 100%;
+  max-width: 290px;
+  text-align: center;
+  display: block;
+  margin-top: 6px;
+}
+.form-group a:hover {
+  color: #e09c00;
+  text-decoration: underline;
+}
+
+button,
+.login-btn {
+  width: 100%;
+  max-width: 290px;
+  background: #f6a500;
+  color: #222;
+  border: none;
+  border-radius: 35px;
+  padding: 14px 0;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background 0.2s, color 0.2s;
+  box-shadow: 0 2px 8px rgba(246,165,0,0.08);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+button:hover,
+.login-btn:hover {
+  background: #e09c00;
+  color: #fff;
+}
+
+.footer {
+  width: 100%;
+  max-width: 290px;
+  margin: 18px auto 0 auto;
+  text-align: center;
+  font-size: 0.98em;
+  color: #888;
+}
+.footer a {
+  color: #f6a500;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+.footer a:hover {
+  color: #e09c00;
+  text-decoration: underline;
+}
+
+@keyframes modalFadeIn {
+  from { transform: translateY(-40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
   .login-wrapper {
-    padding: 40px 30px;
-    border-radius: 10px;
-    width: 100%;
-    max-width: 400px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    text-align: center;
+    padding: 18px 6px 18px 6px;
+    max-width: 98vw;
   }
-
-  .login-wrapper img{
-    width: auto;
-    height: 150PX;
-  }
-
-  .login-wrapper h2 {
-    text-align: center;
-    margin-bottom: 30px;
-    font-weight: normal;
-  }
-
-  .form-group {
-    position: relative;
-    margin-bottom: 25px;
-    text-align: center;
-  }
-  .form-group a{
-    color: #aaaaaa;
-    text-decoration: none;
-  }
-
-  .form-group input {
-    width: 100%;
-    padding: 16px 12px 8px;
-    font-size: 16px;
-    height: 35px;
-    border: 1px solid #555;
-    border-radius: 35px;
-    outline: none;
-    background-color: transparent;
-    transition: border-color 0.2s;
-  }
-
-  .form-group label {
-    position: absolute;
-    top: 50%;
-    left: 12px;
-    transform: translateY(-50%);
-    background-color: #f9f9f9;
-    padding: 0 6px;
-    color: #9ca3af;
-    pointer-events: none;
-    transition: all 0.2s ease;
-  }
-
-  .form-group input:focus {
-    border-color: #F6A500;
-  }
-
-  .form-group input:focus + label,
-  .form-group input:not(:placeholder-shown) + label{
-    top: 6px;
-    font-size: 12px;
-    color: #F6A500;
-  }
-
-  button {
-    width: 100%;
-    padding: 12px;
-    background-color: #F6A500;
-    color: black;
-    border: none;
-    border-radius: 25px;
-    font-size: 16px;
-    cursor: pointer;
-  }
-
-  button:hover {
-    background-color: #F6A500;
-  }
-
+  .form-group,
+  .login-btn,
+  button,
   .footer {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 13px;
-    color: #aaaaaa;
+    max-width: 98vw;
   }
+}
 
-  .footer a {
-    color: #F6A500;
-    text-decoration: none;
+
+/* Modal personalizado para restablecer contraseña - DISEÑO MEJORADO */
+.modal-custom {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.40);
+  justify-content: center;
+  align-items: center;
+  transition: background 0.2s;
+}
+
+.modal-custom.active {
+  display: flex;
+}
+
+.modal-content-custom {
+  background: #fff;
+  padding: 38px 32px 28px 32px;
+  border-radius: 18px;
+  max-width: 370px;
+  width: 92%;
+  position: relative;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.22);
+  margin: auto;
+  animation: modalFadeIn 0.35s;
+  border-top: 6px solid #F6A500;
+}
+
+@keyframes modalFadeIn {
+  from { transform: translateY(-60px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.close-modal {
+  position: absolute;
+  top: 14px; right: 22px;
+  font-size: 2em;
+  color: #bbb;
+  cursor: pointer;
+  font-weight: bold;
+  transition: color 0.2s, transform 0.2s;
+  line-height: 1;
+}
+.close-modal:hover {
+  color: #F6A500;
+  transform: scale(1.15);
+}
+
+.modal-content-custom h3 {
+  margin-top: 0;
+  margin-bottom: 22px;
+  color: #F6A500;
+  font-size: 1.35em;
+  text-align: center;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+.modal-content-custom label {
+  font-size: 1em;
+  color: #333;
+  margin-bottom: 8px;
+  display: block;
+  font-weight: 500;
+}
+
+.modal-content-custom input[type="email"] {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1.5px solid #e0e0e0;
+  font-size: 1em;
+  margin-top: 4px;
+  margin-bottom: 14px;
+  transition: border 0.2s, box-shadow 0.2s;
+  outline: none;
+  background: #fafafa;
+}
+.modal-content-custom input[type="email"]:focus {
+  border: 1.5px solid #F6A500;
+  box-shadow: 0 0 0 2px #ffe7b8;
+}
+
+.modal-content-custom .login-btn {
+  background: #F6A500;
+  color: #222;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 0;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.2s, color 0.2s;
+  box-shadow: 0 2px 8px rgba(246,165,0,0.08);
+}
+.modal-content-custom .login-btn:hover {
+  background: #e09c00;
+  color: #fff;
+}
+
+/* Responsive para el modal */
+@media (max-width: 480px) {
+  .modal-content-custom {
+    padding: 22px 8px 18px 8px;
+    max-width: 98vw;
   }
-
-  .footer a:hover {
-    text-decoration: underline;
+  .close-modal {
+    right: 10px;
+    top: 8px;
+    font-size: 1.5em;
   }
+}
 
-  /* 📱 Estilos responsivos para pantallas pequeñas */
-  @media (max-width: 480px) {
-    .login-wrapper {
-      padding: 30px 20px;
-      border-radius: 8px;
-    }
-
-    .login-wrapper h2 {
-      font-size: 22px;
-    }
-
-    button {
-      font-size: 15px;
-    }
-
-    .form-group input {
-      font-size: 15px;
-    }
-  }
+  

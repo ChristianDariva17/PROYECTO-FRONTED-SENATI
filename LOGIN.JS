@@ -52,3 +52,18 @@ document.addEventListener('DOMContentLoaded', function(){
     }
   })
 })
+
+document.getElementById('abrirModalRecuperar').onclick = function(e) {
+  e.preventDefault();
+  document.getElementById('modalRecuperar').style.display = 'flex';
+};
+document.getElementById('cerrarModalRecuperar').onclick = function() {
+  document.getElementById('modalRecuperar').style.display = 'none';
+};
+// Cierra el modal si se hace clic fuera del contenido
+window.onclick = function(event) {
+  const modal = document.getElementById('modalRecuperar');
+  if (event.target === modal) {
+    modal.style.display = 'none';
+  }
+};
