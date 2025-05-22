@@ -67,3 +67,36 @@ window.onclick = function(event) {
     modal.style.display = 'none';
   }
 };
+
+  const API_URL="http://localhost:3000/api"
+
+
+  // Enviar correo de recuperación
+  const formRecuperar = document.getElementById('formRecuperar');
+  //API de login
+
+  formRecuperar.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const email = document.getElementById('recuperarCorreo').value;
+
+    try {
+      const response = await fetch(`${API_URL}/olvide-contraseña`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ correo: email })
+      });
+
+      if (response.ok) {
+        alert('Se ha enviado un enlace de recuperación a tu correo.');
+        document.getElementById('modalRecuperar').style.display = 'none';
+        this.reset();
+      } else {
+        alert('No se pudo enviar el correo de recuperación. Verifica el correo ingresado.');
+      }
+    } catch (error) {
+      alert('Error al intentar enviar el correo de recuperación.');
+      console.log(error);
+    }
+});
