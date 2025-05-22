@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restablecer Contraseña</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #ffd54f 0%, #ff8a65 100%);
+      min-height: 100vh;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .reset-wrapper {
+      max-width: 400px;
+      width: 100%;
+      padding: 30px;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+    
+    .reset-wrapper h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #333;
+    }
+    
+    .form-group {
+      margin-bottom: 20px;
+    }
+    
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 500;
+      color: #555;
+    }
+    
+    .form-group input {
+      width: 100%;
+      padding: 12px;
+      border: 2px solid #e1e1e1;
+      border-radius: 8px;
+      font-size: 16px;
+      transition: border-color 0.3s ease;
+      box-sizing: border-box;
+    }
+    
+    .form-group input:focus {
+      outline: none;
+      border-color: #ffd54f;
+    }
+    
+    .reset-btn {
+      width: 100%;
+      padding: 12px;
+      background: linear-gradient(135deg, #ffd54f 0%, #ff8a65 100%);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .reset-btn:hover {
+      background: linear-gradient(135deg, #ffca28 0%, #ff7043 100%);
+      transform: translateY(-2px);
+    }
+    
+    .reset-btn:disabled {
+      background: #ccc;
+      cursor: not-allowed;
+      transform: none;
+    }
+    
+    .message {
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    
+    .message.success {
+      background: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+    }
+    
+    .message.error {
+      background: #f8d7da;
+      color: #721c24;
+      border: 1px solid #f5c6cb;
+    }
+  </style>
+</head>
+<body>
+  <div class="reset-wrapper">
+    <img src="imagenes/logo03.png" alt="Logo" style="width: 80px; height: auto; display: block; margin: 0 auto 20px;">
+    <h2>Restablecer Contraseña</h2>
+    
+    <div id="messageContainer"></div>
+    
+    <form id="resetForm">
+      <div class="form-group">
+        <label for="newPassword">Nueva Contraseña</label>
+        <input type="password" id="newPassword" placeholder="Ingresa tu nueva contraseña" required minlength="6">
+      </div>
+      
+      <div class="form-group">
+        <label for="confirmPassword">Confirmar Contraseña</label>
+        <input type="password" id="confirmPassword" placeholder="Confirma tu nueva contraseña" required minlength="6">
+      </div>
+      
+      <button type="submit" class="reset-btn" id="resetBtn">Restablecer Contraseña</button>
+    </form>
+    
+    <div style="text-align: center; margin-top: 20px;">
+      <a href="LOGIN.html" style="color: #ffd54f; text-decoration: none;">Volver al inicio de sesión</a>
+    </div>
+  </div>
+  
+  <script src="RESET.js"></script>
+</body>
+</html>

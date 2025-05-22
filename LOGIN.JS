@@ -1,102 +1,138 @@
-document.addEventListener('DOMContentLoaded', function(){
-  //Obtener las referencias del DOM
-  const contaniner = document.querySelector('.login-wrapper');
-  const registerBtn = document.querySelector('.login-btn');
+document.addEventListener("DOMContentLoaded", function () {
+  const loginForm = document.querySelector("#loginForm");
+  const API_URL = "http://localhost:3000/api";
 
-  const loginForm = document.querySelector('#loginForm');
-
-  //API de login
-  const API_URL="http://localhost:3000/api"
-
-  //Manejar el formulario de registro
-
-  loginForm.addEventListener('submit', async(e)=>{
-    e.preventDefault()
-
-    //Obtener datos de los formularios
-    const correo =  loginForm.querySelector('input[type="email"]').value;
-    const contraseña =  loginForm.querySelector('input[type="password"]').value;
-
-    try{
-      //Enviar la solicitud al servidor
-      const response = await fetch (`${API_URL}/login`,{
-        method :'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-            correo,
-            contraseña
-        })
-      });
-      if(response.ok){
-        // Suponiendo que el backend responde con el nombre del usuario:
-        const data = await response.json();
-        const nombreUsuario = data.nombre || "Usuario";
-        localStorage.setItem('nombreUsuario', nombreUsuario);
-
-
-        alert("Usuario ingresado correctamente");
-        //limpiar el formulario
-        loginForm.reset();
-        //Redirigir a otra pagina
-        window.location.replace("INICIO.HTML");
-
-      }else{
-        alert("Ingrese correctamente los datos");
-        loginForm.reset();
-      }
-    }
-    catch(error){
-      console.log("Error al registrar usuario",error);
-    }
-  })
-})
-
-document.getElementById('abrirModalRecuperar').onclick = function(e) {
-  e.preventDefault();
-  document.getElementById('modalRecuperar').style.display = 'flex';
-};
-document.getElementById('cerrarModalRecuperar').onclick = function() {
-  document.getElementById('modalRecuperar').style.display = 'none';
-};
-// Cierra el modal si se hace clic fuera del contenido
-window.onclick = function(event) {
-  const modal = document.getElementById('modalRecuperar');
-  if (event.target === modal) {
-    modal.style.display = 'none';
+  if (!loginForm) {
+    console.error("No se encontró el formulario de login");
+    return;
   }
-};
 
-  const API_URL="http://localhost:3000/api"
-
-
-  // Enviar correo de recuperación
-  const formRecuperar = document.getElementById('formRecuperar');
-  //API de login
-
-  formRecuperar.addEventListener('submit', async function(e) {
+  loginForm.addEventListener("submit", async (e) => {
     e.preventDefault();
-    const email = document.getElementById('recuperarCorreo').value;
+
+    const emailElement = document.getElementById("email");
+    const passwordElement = document.getElementById("password");
+
+    if (!emailElement || !passwordElement) {
+      console.error("No se encontraron los campos de email o password");
+      alert("Error: No se pudieron encontrar los campos del formulario");
+      return;
+    }
+
+    const correo = emailElement.value.trim();
+    const contraseña = passwordElement.value.trim();
+
+    if (!correo || !contraseña) {
+      alert("Por favor, completa todos los campos");
+      return;
+    }
 
     try {
-      const response = await fetch(`${API_URL}/olvide-contraseña`, {
-        method: 'POST',
+      console.log("Enviando datos de login...");
+
+      const response = await fetch(`${API_URL}/login`, {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json'
+          "Content-Type": "application/json",
         },
-        body: JSON.stringify({ correo: email })
+        body: JSON.stringify({
+          correo,
+          contraseña,
+        }),
       });
 
+      console.log("Respuesta recibida:", response.status);
+
       if (response.ok) {
-        alert('Se ha enviado un enlace de recuperación a tu correo.');
-        document.getElementById('modalRecuperar').style.display = 'none';
-        this.reset();
+        const data = await response.json();
+        const nombreUsuario = data.nombre || "Usuario";
+
+        localStorage.setItem("nombreUsuario", nombreUsuario);
+        localStorage.setItem("justLoggedIn", "true");
+
+        alert("Usuario ingresado correctamente");
+        loginForm.reset();
+        window.location.replace("INICIO.HTML");
       } else {
-        alert('No se pudo enviar el correo de recuperación. Verifica el correo ingresado.');
+        const errorText = await response.text();
+        console.log("Error del servidor:", errorText);
+        alert(`Error: ${errorText}`);
+        loginForm.reset();
       }
     } catch (error) {
-      alert('Error al intentar enviar el correo de recuperación.');
-      console.log(error);
+      console.log("Error al hacer login:", error);
+      alert("Error de conexión. Verifica que el servidor esté funcionando.");
     }
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const abrirModalBtn = document.getElementById("abrirModalRecuperar");
+  const cerrarModalBtn = document.getElementById("cerrarModalRecuperar");
+  const modal = document.getElementById("modalRecuperar");
+  const formRecuperar = document.getElementById("formRecuperar");
+
+  // Abrir modal
+  if (abrirModalBtn && modal) {
+    abrirModalBtn.onclick = function (e) {
+      e.preventDefault();
+      modal.style.display = "flex";
+    };
+  }
+
+  // Cerrar modal
+  if (cerrarModalBtn && modal) {
+    cerrarModalBtn.onclick = function () {
+      modal.style.display = "none";
+    };
+  }
+
+  window.onclick = function (event) {
+    if (modal && event.target === modal) {
+      modal.style.display = "none";
+    }
+  };
+
+  if (formRecuperar) {
+    const API_URL = "http://localhost:3000/api";
+
+    formRecuperar.addEventListener("submit", async function (e) {
+      e.preventDefault();
+
+      const emailInput = document.getElementById("recuperarCorreo");
+      if (!emailInput) {
+        console.error("No se encontró el campo de recuperación de correo");
+        return;
+      }
+
+      const email = emailInput.value.trim();
+
+      if (!email) {
+        alert("Por favor, ingresa tu correo electrónico");
+        return;
+      }
+
+      try {
+        const response = await fetch(`${API_URL}/forgot-password`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ correo: email }),
+        });
+
+        if (response.ok) {
+          alert("Se ha enviado un enlace de recuperación a tu correo.");
+          if (modal) modal.style.display = "none";
+          this.reset();
+        } else {
+          const errorText = await response.text();
+          alert(`Error: ${errorText}`);
+        }
+      } catch (error) {
+        alert("Error al intentar enviar el correo de recuperación.");
+        console.log(error);
+      }
+    });
+  }
 });

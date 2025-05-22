@@ -130,6 +130,136 @@
 }
 
 
+/* Estilos para el botón de usuario - Amarillo y Naranja */
+.btn-usuario {
+    background: linear-gradient(135deg, #ffd54f 0%, #ff8a65 100%);
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(255, 213, 79, 0.4);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.btn-usuario:hover {
+    background: linear-gradient(135deg, #ffca28 0%, #ff7043 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(255, 202, 40, 0.5);
+    color: white;
+}
+
+.btn-usuario:focus {
+    box-shadow: 0 0 0 3px rgba(255, 213, 79, 0.3);
+    color: white;
+}
+
+.btn-usuario:active {
+    background: linear-gradient(135deg, #ffb300 0%, #f4511e 100%);
+    transform: translateY(0);
+}
+
+/* Estilos para el dropdown del usuario */
+.dropdown-menu {
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0 10px 30px rgba(255, 152, 0, 0.2);
+    padding: 10px 0;
+    margin-top: 10px;
+    min-width: 200px;
+    background: white;
+}
+
+.dropdown-item {
+    padding: 10px 20px;
+    color: #333;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.dropdown-item:hover {
+    background: linear-gradient(135deg, #ffd54f 0%, #ff8a65 100%);
+    color: white;
+    transform: translateX(5px);
+    border-radius: 8px;
+    margin: 0 8px;
+}
+
+.dropdown-item:active {
+    background: linear-gradient(135deg, #ffca28 0%, #ff7043 100%);
+}
+
+.dropdown-item i {
+    margin-right: 8px;
+    width: 16px;
+    color: inherit;
+}
+
+.dropdown-divider {
+    margin: 8px 16px;
+    border-color: #ffe0b2;
+    border-width: 1px;
+}
+
+/* Animación para el dropdown */
+.dropdown-menu.show {
+    animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Efectos adicionales para hacer más atractivo */
+.dropdown-menu::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    right: 20px;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid white;
+    filter: drop-shadow(0 -2px 4px rgba(255, 152, 0, 0.1));
+}
+
+/* Hover effect para el icono del usuario */
+.btn-usuario i {
+    transition: transform 0.3s ease;
+    margin-right: 6px;
+}
+
+.btn-usuario:hover i {
+    transform: rotate(10deg) scale(1.1);
+}
+
+/* Efecto de pulso sutil para llamar la atención */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 2px 10px rgba(255, 213, 79, 0.4);
+    }
+    50% {
+        box-shadow: 0 2px 20px rgba(255, 213, 79, 0.6);
+    }
+    100% {
+        box-shadow: 0 2px 10px rgba(255, 213, 79, 0.4);
+    }
+}
+
+.btn-usuario:focus {
+    animation: pulse 2s infinite;
+}
+
 .containers {
   max-width: 950px;
   margin: 20px auto;
